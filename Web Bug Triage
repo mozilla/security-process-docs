@@ -1,0 +1,17 @@
+ Status: Draft
+ Date: 2013.11.27
+ ToDo: Send for Review
+
+==Purpose==
+Triage of Website, Webtool, Mozilla Services & Client Services bugs that have been flagged as being security sensitive for proper ownership by the component team.
+
+==Tools==
+* [https://wiki.mozilla.org/Security/Radar/Triage#Untriaged_Web_Sec_Bugs Web Security Triage Queries]
+
+==Process==
+# Review the bugs in each query list that does not have an owner or has an onwer set to "nobody". In consultation with representatives from the areas that own each product assign an owner.
+# Assigned owners should review the bug and confirm the report issue.
+# If needed the bug should be rated according to [https://wiki.mozilla.org/Security_Severity_Ratings Security Severtiy Ratings] in the keword field
+
+==Proposed Changes for Q1 2014==
+* Review bugs for age and severity and determine a way to resolve the oldest of bugs.
