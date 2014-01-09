@@ -1,0 +1,85 @@
+ Status: Draft
+ Date: 2013.11.08
+ ToDo:
+ * Final sign off
+
+==Document Purpose==
+This document describes the lifecycle of bugs used for engaging the Security
+teams in security review activities. This may include bugs for OpSec or ApSec review.
+
+Note: This does not cover [[Security/Process/Vendor Reviews|Vendor Reviews]] or [[Privacy/Technical_Privacy_Reviews]]
+
+==Initiating the Process==
+Bugs enter the process in one of 2 ways:
+# The flag '''sec-review''' is set to '''?''' 
+#* ''Notes:'' 
+#** ''Not used for bugs not already in Security Assurance component.''
+#** ''Do not set a requestee for the flag as that interferes with triage.''
+# A new bug is created in the '''Security Assurance: Review Request''' component
+
+* Bugs will be triaged weekly by the Security Program Management team (currently Wednesdays at 2pm PST).
+* For urgent security reviews, please contact XXXX ?
+
+=== Bugs using sec-review ? ===
+* The sec-review requestee will be set to a member of the team who will prefrom the neccessary work.
+* Bugs with work estimate < 1hr 
+** Notes of the work preformed will be direclty logged in the bug as a comment. Any security sensitive issues found will be filled in the same component and block the original bug with appropriate security flags set.
+* Bugs with work estimate > 1hr
+** The assigned requestee will file a bug in the '''Security Assurance: Review Request''' assigned to themselves and blocking the bug with the sec-review ? flag
+* Follow the process below.
+
+Tools : [https://wiki.mozilla.org/Security/RiskRatings#What_Scores_Mean Estimation of work]
+
+===Security Assurance: Review Request===
+# Create a bug in the '''Security Assurance: Review Request''' and assign to nobody
+#* If both appsec and opsec involvemnet is needed seperate bugs need to be filled
+#** Add OPSec to the summary for OpSec involvement
+# block the feature bug with request bug 
+# In comment 0 please answer the questions below
+
+==== Questions to Address within Request Body ====
+#Who is/are the point of contact(s) for this review?
+#Please provide a short description of the feature / application (e.g. problem solved, use cases, etc.):
+#Please provide links to additional information (e.g. feature page, wiki) if available and not yet included in feature description:
+#Does this request block another bug? If so, please indicate the bug number
+#This review will be scheduled amongst other requested reviews. What is the urgency or needed completion date of this review?
+#To help prioritize this work request, does this project support a goal specifically listed on this quarter's goal list?  If so, which goal?
+#Please answer the following few questions: (Note: If you are asked to describe anything, 1-2 sentences shall suffice.)
+#*Does this feature or code change affect Firefox, Thunderbird or any product or service the Mozilla ships to end users?
+#*Are there any portions of the project that interact with 3rd party services?
+#*Will your application/service collect user data? If so, please describe
+#If you feel something is missing here or you would like to provide other kind of feedback, feel free to do so here (no limits on size):
+#Desired Date of review (if known from https://mail.mozilla.com/home/ckoenig@mozilla.com/Security%20Review.html) and whom to invite.
+
+== Triage Process ==
+* The Security Program Management Team will use the triage queries from [[Security/Radar/Triage]]
+* Bugs marked '''sec-review''' flag set to '''?'''
+# Evaluate the bug to determin if security work is needed
+** if no work is determined as needed the flag will be cleared and comment placed in the bug as such
+** assigne a security resource in the requestee for the flag
+* Bugs marked as triage needed in the Security Assurance Component
+** Set '''Assigned To:''' to an appropriate member of the team to preform the review
+** remove '''[triage needed]''' from the whiteboard if present
+* Bugs in the Security Assurance component that are not assigned (nobody)
+** Set '''Assigned To:''' to an appropriate member of the team to preform the review
+
+== Post Triage ==
+To be preformed by the bug assignee or flag requestee
+
+# Remove any whiteboard tags that may have been missed by the triage team
+# If set as the requestee on a sec-review ? flag estimate work time and follow the process above to preform the work of 
+# When the bug mets the critera for a being assigned to a sprint per the [[Security/Process/Agile|Security Agile Process]] add the following to the whiteboard '''u= c=  p=1 s=ready''' so the bug may be triaged and assigned a to a sprint.
+#* The bug will be assinged to a Sprint (or sprints as neccessary) for the work to be completed.
+
+'''Note:''' If a bug needs to be reassigned add '''[triage needed]''' to the whiteboard or remvoe the requestee on the sec-review flag
+
+===Completion Steps===
+* If work is completed in a bug via a sec-review flag
+*# Ensure all notes are made in comments of the bug to convey work done or findings
+*# Set the sec-review flag to + if completed and - if failed
+
+* If work is done in a Secuirty Assurance bug
+*# Make notes in bug as necessary and ensure all issue found block both the review bug and the component bug or file in proper component
+*# Set bug status to RESOLVED > FIXED
+
+** If there are no blocking bugs or all blocking bugs are resolved then mark the bug VERIFIED > FIXED
