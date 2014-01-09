@@ -1,0 +1,33 @@
+='''Security Assurance Vendor Review Request'''=
+== Review Questions ==
+
+The following basic questions are used to begin the security assessment of a particular vendor that will interact with Mozilla.
+
+#Overall
+#*Please describe the overall purpose of the system and how Mozilla data will be integrated
+#Security Management
+#*Have you performed internal security audits of your code or application that, at a minimum, addressed the OWASP Top 10? If so, please provide a description of the review and results.
+#*Has a security audit been performed by an external third party? If so, who performed this audit and are the results available?
+#*How do you protect Mozilla data that will be stored on your servers or within your applications?
+#*How do you prevent other customers of your service from obtaining access to data provided by Mozilla?
+#*What is your disclosure policy to customers in the event of a compromise of your servers, applications or any related infrastructure that interacts with the applications holding Mozilla data?
+#*Have you suffered a security compromise in the past 24 months? If so, please provide details and remediation that occurred as a result.
+#*What other large engagements/clients have you supported with this application?
+#Technical Design
+#*Do you support full SSL communication for all inbound and outbound communications?
+#*Describe the technology stack of the application and infrastructure.
+#*What options do your support for authentication?
+#**username/password
+#**certificate based authentication
+#**secret token
+#*Are authentication secrets (e.g. passwords) stored in a non-reversible form within your database (e.g. hashing)?
+#* What type of hashing algorithm do you use (e.g. sha512, md5, bcrypt)?
+#* Are salts added to the hashing algorithm which are unique for each user? 
+#* Will user passwords (or authentication secrets) be available to any other users via any functionality (example, admin users can see clear text passwords of users)?
+#*Do you use third party servers or do you host the servers yourself?
+#*Do you use any third party services or communicate with any third parties from this application?
+#Security Verification
+#*Will testing of the running application be possible?
+#*Will source code for their application be available?
+#*Do you have attestation reports from any other vendors regarding your security posture?
+#*Do you have any other security certifications that may be relevant?
