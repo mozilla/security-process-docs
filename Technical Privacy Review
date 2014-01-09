@@ -1,0 +1,49 @@
+ Status: Draft
+ Date: 2013.12.20
+ ToDo: Final sign-off
+
+==Purpose==
+In order to ensure that the software produced my Mozilla is in accordance with our [https://wiki.mozilla.org/Privacy/Principles privacy principles] it is neccessary to review the technical architecture and operations of certain items. 
+
+==Tools==
+* List of [http://wiki.mozilla.org/Privacy/Technical_Privacy_Reviews reviews]
+
+==Entrance==
+Items have 3 ways to enter the process
+# Via the '''[https://bugzilla.mozilla.org/form.moz-project-review Project Kickoff Form]'''
+#* Based on the answes to the questions a bug with the proper settings will be filled
+# A direct '''Security Assurance: Review Request'''
+#* Keyword set to ''privacy-review-needed''
+#* Summary should start with ''Privacy Review:''
+# Marking a bug with the keyword ''privacy-review-needed''
+#* NOTE: ''The bug should also be marked with a need-info? to :curtisk''
+
+==Process==
+# When the feature has reached either feature complete or Design Complete stage a privacy wiki for the items is created using the [https://wiki.mozilla.org/Privacy/Reviews/Template template]
+# Initial required items at wiki creation
+#* Feature/Product
+#* Product Champion - the contact in the product team for this review
+#* Privacy Champion - the privacy contact who will preform the review
+#* Security Contact - member of the security team who may be doing other review work
+#* Document State - set to new ({{new|}}) with any necessary information
+# Dates in the Timeline section shall be updated as necessary as the issue progresses
+# The link to the technical privacy review wiki will then be copied in the bug and sent to the Product Champion to add information
+#* The focus of this information is 2 fold
+#** Information inputs - where, from whom, and what type of information is being gathered
+#** Information outputs - where, to whom (teams, systems, 3rd parties) and what type of information is being shared
+# Each component that is involved in data gathering or data export should be enumerated as a seperate '''Component X''' section of the wiki
+# If a meeting is required to review any of the information that shall be setup between the Privacy Champion, the Product Champion and any other necessary parties
+# When completed the wiki will be passed back to the Pricay Champion for reivew and completion of the '''User Data Risk Minimization''' and '''Alignment with Privacy Opearating Principles''' sections.
+#* Any bugs that need to be filled for information or alteration will be filled and set to blockt he review bug and the feature bug
+#* Document State - set to Document State - set to new ({{ok|}}) and a link to the public newsgroup for comments 
+#** a link to the discussion thread should also be added to the '''Follow-up Tasks and Tracking''' section
+# The wiki will then be shared to:
+#* dev-platform
+#* security-group
+# This shall serve as the public comment to review the work done, ask furhter questions and add information or questions for follow-up
+#* The public comment time shall last for 7 calendar days
+# If new questions or items missed during the Privacy Champion review are uncovered they shall be added to the wiki and bugs filled as neccessary
+#* Items should be added to the '''Follow-up Tasks and Tracking''' section of the document for tracking
+# If no new information or comments are garnered then the public comment period shall be closed.
+# if a meeting is required to review any of the information that shall be setup between the Privacy Champion, the Product Champion and any other necessary parties
+# Once all bugs are sufficiently resolved and all follow-up items are resolved the Document State - set to new ({{done|}}) with any necessary information and teh bug for tracking the work shall be resolved
