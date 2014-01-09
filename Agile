@@ -1,0 +1,52 @@
+ Status: Draft
+ Date: 2013.11.27
+ ToDo: Send for Review
+ 
+
+==Tools==
+*[https://scrumbu.gs/t/security-assurance/ Security Assurance scrumbu.gs]
+*[https://docs.google.com/a/mozilla.com/spreadsheet/ccc?key=0AlDw2hHXmVgCdHJlUVJ5TGcyYWZTbVlMOHBKU3Y4Z2c&usp=drive_web#gid=1 Sprint Overview GoogleDoc]
+* [http://standu.ps/team/security-assurance Security Assurance standu.ps]
+
+* [Risk Rating table] https://wiki.mozilla.org/Security/RiskRatings
+
+==Preclearance criteria==
+Bugs that need risk review:
+* Bugs not ready for a full appsec/opsec review but need a risk level assigned
+** If a bug does not have a [score= in the whiteboard we will assume the bug is in this category
+
+Bugs that need architecture review:
+* Bug has a risk rating of medium or higher
+* Architecture diagrams are provided by the development team
+
+Bugs ready for code review:
+* Bug has a risk review (i.e.[score=low] in the whiteboard)
+* Code is complete and link to it’s repository has been provided
+* If necessary, a staging/dev environment has been provided for us that we can use to test against
+* Architecture/data flow or other diagrams have been provided by the development team appropriate for the level of risk identified for the bug
+
+==Sprint Entrance==
+When a bug meets preclearance criteria
+* Add '''u= c= p=1 s=ready''' to the whiteboard of the bug
+** This marks the bug for consideration during sprint triage
+* Every 2 weeks on Wed after the normal Security Bug Triage all bugs so marked will be considered
+** If accepted '''s=''' will be altered with a sprint. (''ie. s=sprint2'')
+** Sprints  begin the Monday following a sprint triage
+
+==Standups==
+Standups are needed during a sprint to report on progress and adjust the sprint if necessary and to identify and remove any blockers to progress.
+At the current time the security team is using /http://standu.ps/team/security-assurance
+* Updates can be made directly on the site by Persona identified users
+* Updates can also be made by messages to the bot in the appropriate IRC channel for the given team
+** ''#AppSec'' for Application Security (Web sits, web services, etc.)
+** ''#ClientSec'' for Client Security (Firefox, Thunderbird, Fuzzing, etc.)
+** ''#FxOSSec'' for Firefox OS Security 
+** These updates are not meant to be minute by minute updates, but to highlight the plans for the day and any blockers this helps keep a historic record and adjust a sprint if needed for maximum success
+* ''Standu.ps'' supports the use of hashtags at current we are only using the '''#blocker''' tag to mark blocking issues
+
+==Sprint Reporting==
+* If a bug can not be completd (RESOLVED-FIXED) during a sprint then its future status needs to be communicated to the Scrum Master
+Examples Include:
+# Bugs that entered only for risk ranking and need to be assigned to a future sprint
+# Bugs that have work that will take multiple sprints to complete (longer than 2 weeks)
+# Bugs that have blockers or encounter other issues that cuase them for any reason not to close
