@@ -1,0 +1,58 @@
+<b><center>Vendor Review Security Criteria<br>
+(DRAFT 2013.12.31)</center></b>
+
+ To Do:
+ * Needs final sign off from managers
+ * Review from team
+
+= Purpose: =
+In order to better deploy resources and set expectations for the level of work in the Mozilla Vendor Review process it is necessary to roughly classify projects into risk categories. Each tier has a set of characteristics meant to help in project categorization as well as a set of requirements that must be concluded for a review to be considered complete. 
+All reviews will begin with the a set of questions [1] that seek to gather the basic information about the system to be acquired and help us in the initial categorization of the review.
+
+[1](https://wiki.mozilla.org/Security/Reviews/Review_Request_Form#Security_Assurance_Vendor_Review_Request
+
+== Terms: ==
+<u>Sensitive Data</u> - A voluntarily generic term which includes, but is not limited to:
+* Passwords, authentication data, credentials of any kind, stored online, offline, or spoken
+* Proprietary data which does not belong to Mozilla (such as drivers from other companies, etc.)
+* Private data from users or from company employees (such as logs should they contain such data for any reason)
+
+= Tier 3: Risk Level Low =
+<u>Characteristics:</u> Does not contain sensitive data and may be used by contributors and Mozilla staff with minimal oversight
+* Should support basic authentication (ie. username/password)
+* <b>Requirements</b>
+** Full answers to vendor questionnaire
+*** follow-up as necessary based on answers to document concerns and risk
+
+= Tier 2: Risk Level Medium =
+<u>Characteristics:</u> Contains private data
+* <b>Requirements</b>
+** Data should be encrypted in
+*** Written and agreed to disclosure policy and procedure
+*** Must support logical separation of Mozilla data
+*** Should support authentication beyond basic measures
+**** authentication secrets should be stored in a non-reversible form
+*** Completed Mozilla vendor reviews for 3rd party servers or services
+** One of the following shall be required 
+*** Penetration testing by Mozilla Security Assurance staff
+*** Audit report from a trusted source
+*** Internal audit documents showing methods and general findings
+*** Attestation reports
+
+= Tier 1: Risk Level High =
+Contains or processes sensitive data (Corporate and/or user)
+* <b>Requirements</b>
+* Full answers to vendor questionnaire with a focus on:
+** Must support SSL for all communication
+** Must support logical separation of Mozilla data
+** Data encrypted at rest
+** Written and agreed to disclosure policy and procedure
+** Authentication beyond basic (username/password) measures
+*** Authentication secrets stored in a non-reversible form
+*** Authentication secrets not available to other users (admin consoles)
+** Completed Mozilla vendor reviews for 3rd party servers or services
+* One or more of the following shall be required to demonstrate compliance with all parts of the security questionnaire
+** Penetration test by Mozilla Security Assurance staff
+** Audit report from a trusted source
+** Internal audit showing methods and general findings
+** Copies of attestation reports for our review
